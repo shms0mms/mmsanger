@@ -1,5 +1,0 @@
-mutation UploadImage($imageURL: String!) {
-	uploadImage(imageURL: $imageURL) {
-		imageURL
-	}
-}

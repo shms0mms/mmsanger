@@ -1,7 +1,0 @@
-
-
-mutation UpdateUser($user: UserUpdateInput!) {
-	updateUser(user: $user) {
-		username
-	}
-}

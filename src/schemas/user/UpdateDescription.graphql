@@ -1,5 +1,0 @@
-mutation UpdateDescription($description: String!) {
-	updateDescription(description: $description) {
-		description
-	}
-}

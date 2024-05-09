@@ -1,0 +1,166 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Chat {
+  chatName: String
+  createdAt: DateTime!
+  id: String!
+  messages: [Message!]!
+  users: [UserID!]!
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type Delete {
+  chatId: ID!
+}
+
+type History {
+  id: ID!
+  userId: ID!
+  users: [UserID!]!
+}
+
+type Message {
+  chatId: String!
+  createdAt: DateTime!
+  id: ID!
+  message: String!
+  user: UserID!
+  userId: ID!
+}
+
+type Mutation {
+  addUserToHistory(userId: Float!): History!
+  auth: User!
+  clean: History!
+  confirmEmail(userId: Float!): UserTokens!
+  createChat(users: [UserIDInput!]!): Chat!
+  getById: User!
+  getNewTokens: UserTokens!
+  login(user: UserLoginInput!): UserAuth!
+  register(user: UserCreateInput!): UserAuth!
+  removeChatById(chatId: String!): Delete!
+  removeUserFromHistory(userId: Float!): History!
+  updateDescription(description: String!): UserDB!
+  updateUser(user: UserUpdateInput!): UserUpdate!
+  uploadImage(imageURL: String!): UserImage!
+}
+
+type Query {
+  getAll(currentPage: Float!, searchTerm: String!): Users!
+  getAllChats(searchTerm: String!): [Chat!]!
+  getChatByChatId(chatId: String!): Chat!
+  getCurrentUser: UserDB!
+  getHistory: History!
+  getLastMessagesByChatId(chatId: String!): [Message!]!
+  getUserById(userId: String!): UserDB!
+  removeAll: Boolean!
+}
+
+type User {
+  description: String!
+  email: String!
+  firstName: String!
+  imageURL: String!
+  secondName: String!
+  status: String!
+  username: String!
+}
+
+type UserAuth {
+  accessToken: String!
+  description: String!
+  email: String!
+  firstName: String!
+  id: Float!
+  imageURL: String!
+  refreshToken: String!
+  secondName: String!
+  status: String!
+  username: String!
+}
+
+input UserCreateInput {
+  email: String!
+  firstName: String!
+  password: String!
+  secondName: String!
+  username: String!
+}
+
+type UserDB {
+  description: String!
+  email: String!
+  firstName: String!
+  id: Float!
+  imageURL: String!
+  password: String!
+  secondName: String!
+  status: String!
+  username: String!
+}
+
+type UserID {
+  description: String!
+  email: String!
+  firstName: String!
+  id: Float!
+  imageURL: String!
+  secondName: String!
+  status: String!
+  username: String!
+}
+
+input UserIDInput {
+  description: String!
+  email: String!
+  firstName: String!
+  id: ID!
+  imageURL: String!
+  secondName: String!
+  status: String!
+  username: String!
+}
+
+type UserImage {
+  imageURL: String!
+}
+
+input UserLoginInput {
+  email: String!
+  password: String!
+  username: String!
+}
+
+type UserTokens {
+  accessToken: String!
+  refreshToken: String!
+}
+
+type UserUpdate {
+  description: String!
+  email: String!
+  firstName: String!
+  imageURL: String!
+  secondName: String!
+  username: String!
+}
+
+input UserUpdateInput {
+  description: String!
+  email: String!
+  firstName: String!
+  secondName: String!
+  username: String!
+}
+
+type Users {
+  currentPage: Float!
+  quantity: Float!
+  users: [UserID!]!
+}

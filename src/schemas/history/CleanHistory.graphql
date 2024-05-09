@@ -1,5 +1,0 @@
-mutation CleanHistory {
-	clean {
-		id
-	}
-}
