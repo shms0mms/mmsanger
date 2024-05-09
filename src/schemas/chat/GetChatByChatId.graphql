@@ -1,0 +1,25 @@
+query GetChatByChatId($chatId: String!) {
+	getChatByChatId(chatId: $chatId) {
+		messages {
+			message 
+			id
+			userId
+			user {
+				firstName 
+				secondName 
+				id 
+				imageURL 
+				status
+			}
+		}
+		users  {
+			firstName 
+			secondName 
+			id 
+			username
+			status
+			imageURL
+		}
+		
+	}
+}

@@ -1,0 +1,12 @@
+mutation AddUserToHistory($userId: Float!) {
+	addUserToHistory(userId: $userId) {
+		users {
+			firstName
+			secondName
+			status
+			imageURL
+			id 
+			
+		}
+	}
+}

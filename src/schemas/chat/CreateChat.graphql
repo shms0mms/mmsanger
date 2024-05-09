@@ -1,0 +1,5 @@
+mutation CreateChat($users: [UserIDInput!]!) {
+  createChat(users: $users) {
+    id
+  }
+}

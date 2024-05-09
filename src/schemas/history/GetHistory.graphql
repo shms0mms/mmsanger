@@ -1,0 +1,14 @@
+
+
+query GetHistory {
+	getHistory {
+		users{
+			firstName 
+			secondName
+			id 
+			status 
+			imageURL
+		}
+		id
+	}
+}

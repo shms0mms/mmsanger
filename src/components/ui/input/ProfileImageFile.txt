@@ -1,0 +1,25 @@
+// const formData = new FormData()
+// formData.append(
+// 	"operations",
+// 	JSON.stringify({
+// 		query:
+// 			"mutation UploadImage($imageURL: Upload!) { uploadImage(imageURL: $imageURL) { imageURL } }",
+// 		variables: {
+// 			imageURL: null,
+// 		},
+// 	})
+// )
+// formData.append(
+// 	"map",
+// 	JSON.stringify({ "0": ["variables.imageURL"] })
+// )
+// formData.append("0", file)
+
+
+
+// context: {
+// 	headers: {
+// 		"apollo-require-preflight": true,
+// 		"Content-Type": `multipart/form-data; boundary=${generateBoundary()}`,
+// 	},
+// },

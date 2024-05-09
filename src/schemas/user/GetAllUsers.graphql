@@ -1,0 +1,15 @@
+query GetAllUsers($currentPage: Float!, $searchTerm: String!) {
+	getAll(currentPage: $currentPage, searchTerm: $searchTerm) {
+		users {
+			id 
+			username 
+			email 
+			firstName
+			secondName
+			status
+			imageURL
+		}
+		currentPage
+		quantity
+	}
+}

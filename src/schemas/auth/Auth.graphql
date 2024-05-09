@@ -1,0 +1,10 @@
+mutation Auth {
+	auth {
+		firstName
+		secondName
+		username
+		email
+		id
+		status
+	}
+}

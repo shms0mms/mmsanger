@@ -1,0 +1,18 @@
+query GetAllChats($searchTerm: String!) {
+  getAllChats(searchTerm: $searchTerm) {
+    id 
+    users {
+      id
+      firstName
+      secondName
+      imageURL
+      status
+      
+    }
+    messages {
+      id 
+      message
+      createdAt
+    }
+  }
+}
